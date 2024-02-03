@@ -5,10 +5,10 @@ import navListData from '../data/navListData'
 
 
 
-const SideMenu = () => {
+const SideMenu = ({active}) => {
     const [navData, setNavData] = useState(navListData);
   return (
-    <div className='sideMenu'>
+    <div className={`sideMenu ${active ? 'active':undefined}`}>
           <a href="" className="logo">
               <i className="bi bi-controller"></i>
               <span className="brand">Play</span>

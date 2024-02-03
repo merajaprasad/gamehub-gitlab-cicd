@@ -84,3 +84,29 @@ box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1),
 .sideMenu .social li .share:hover{
     background: var(--primary);
 }
+
+.sideMenu.active{
+    width: 7%;
+    transition: 1s;
+    overflow: hidden;
+    align-items: center;
+}
+.sideMenu.active .brand,
+.sideMenu.active .navName{
+    display: none;
+}
+.sideMenu.active .nav li a{
+    font-size: 1.8em;
+
+}
+.sideMenu.active .social{
+    padding:0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.banner.active{
+    position: relative;
+    width: 93%;
+    transition: 1s;
+}
