@@ -37,6 +37,9 @@ const GameSwiper = ({ games }) => {
               <SwiperSlide key={game._id}>
                   <div className="gameSlider">
                       <img src={game.img} alt="Game Image" className="" />
+                      <div className={`video ${active ? 'active':undefined}`}>
+                          <iframe width="1280" height="720" src={game.trailer} title={game.title} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                      </div>
                       <div className="content">
                           <h2 className="">
                               {game.title}
@@ -57,7 +60,7 @@ const GameSwiper = ({ games }) => {
                           </div>
                       </div>
                   </div>
-                  <h4>{game.title}</h4>
+                  
                   
               </SwiperSlide>
           ))
