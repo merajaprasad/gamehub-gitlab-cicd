@@ -3,7 +3,6 @@ import './gameCard.css'
 import GameRating from './GameRating';
 
 const GameCard = ({ game }) => {
-    console.log(game);
     
   return (
       <div className='col-xl-3 col-lg-4 col-md-6'>

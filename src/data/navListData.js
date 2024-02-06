@@ -8,7 +8,7 @@ const navListData = [
   },
   {
     _id: 2,
-    target: "catogories",
+    target: "categories",
     name: "Catogories",
     icon: "bi-window-stack",
     active: false,
