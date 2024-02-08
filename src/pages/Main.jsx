@@ -56,7 +56,7 @@ const Main = () => {
     })
   }
   const fetchData = () => {
-    fetch('http://localhost:3000/api/gameData.json')
+    fetch('https://game-sphere-hub-gamma.vercel.app/api/gameData.json')
       .then((response) => response.json())
       .then(data => {
         setGames(data)
