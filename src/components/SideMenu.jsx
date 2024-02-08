@@ -23,7 +23,7 @@ const SideMenu = ({active,sectionActive}) => {
               <i className="bi bi-controller"></i>
               <span className="brand">Play</span>
           </a>
-          <ul className="nav">
+          <ul className="nav flex-column mb-sm-auto ">
               {navData.map(item =>
                   <NavListItems key={item._id} item={item} navOnClick={handleNavOnClick } />
                 )}

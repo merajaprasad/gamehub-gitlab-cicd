@@ -11,6 +11,10 @@ const GameCard = ({ game }) => {
     const handleRemoveFromLibrary = game => {
         setLibrary(library.filter(item => item._id !== game._id));
     };
+    const handleAddToBag = game => {
+        if (bag.includes(game)) return;
+        setBag([...bag,game])
+     };
     
   return (
       <div className='col-xl-3 col-lg-4 col-md-6'>
@@ -38,7 +42,9 @@ const GameCard = ({ game }) => {
               <span className="currentPrice">
                   ${(0.99- game.discount)*(game.price.toFixed(2))}
               </span>
-              <a href="#" className="addBag">
+                  <a href="#" className="addBag" onClick={() => {
+                      handleAddToBag(game)
+              }}>
                   <i className="bi bi-bag-plus-fill"></i>
               </a>
           </div>
