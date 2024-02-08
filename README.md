@@ -1,3 +1,12 @@
+## Preview
+<!--Night Owl image-->
+<div>
+  <div>## Gallery Page</div>
+  <img align="right" width="100%" src="https://github.com/sanujasethi06/game-sphere-hub/blob/main/src/images/preview.gif">
+</div>
+<div>
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
