@@ -1,7 +1,7 @@
 ## Preview
-<!--Night Owl image-->
+
 <div>
-  <div>## Gallery Page</div>
+  <div>DEMO</div>
   <img align="right" width="100%" src="https://github.com/sanujasethi06/game-sphere-hub/blob/main/src/images/preview.gif">
 </div>
 <div>
