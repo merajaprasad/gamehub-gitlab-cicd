@@ -19,6 +19,17 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
-## Run on Docker Container
-
+# Run on Docker Container
+#### Prerequisits
+- install docker
+- install git
+#### Create Image
+```
+docker build -t gamehubimage .
+```
+#### Create Container
+```
+docker run -d --name gamehubcontainer -p 3000:3000 gamehubimage
+```
+Now open application from browser by running [your-public-ip:3000]. if application is not opening from browser then check port 3000 is enabled or not on your EC2 server.
 
