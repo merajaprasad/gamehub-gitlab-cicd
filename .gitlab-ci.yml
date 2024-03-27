@@ -1,0 +1,31 @@
+
+stages:
+ - build_stage
+ - deploy_stage
+
+build:
+ stage: build_stage
+ script:
+  - docker --version
+  - docker build -t gamehubimage . # this will create docker image through dockerfile
+
+ tags:
+  - ec2
+  - server
+
+  artifacts:
+  paths:
+   - node_modules
+   - package-lock.json
+
+deploy:
+ stage: deploy_stage
+ script:
+  - docker run -d --name gamehubcontainer -p 3000:3000 gamehubimage
+  - docker login -u $DOCKER_USERNAME -p $DOCKER_TOKEN
+  - docker tag gamehubimage $DOCKER_USERNAME/gamehubimage      # Tagging the Image
+  - docker push $DOCKER_USERNAME/gamehubimage 
+ tags:
+  - ec2
+  - server
+

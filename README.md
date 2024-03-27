@@ -24,12 +24,42 @@ Your app is ready to be deployed!
 - install docker
 - install git
 #### Create Image
-```
+```bash
 docker build -t gamehubimage .
 ```
 #### Create Container
-```
+```bash
 docker run -d --name gamehubcontainer -p 3000:3000 gamehubimage
 ```
 Now open application from browser by running [your-public-ip:3000]. if application is not opening from browser then check port 3000 is enabled or not on your EC2 server.
+
+# GitLab Pipeline
+Prerequities
+- install gitlab runner
+- configure gitlab secret variable
+- add runner user to docker group
+
+`uname -m` get OS architecture
+`chmod +x script-runner.sh` give executable permission
+`sh script-runner.sh` run the script
+
+```bash
+curl -LJO https://gitlab-runner-downloads.s3.amazonaws.com/latest/rpm/gitlab-runner_amd64.rpm
+sudo rpm -Uvh gitlab-runner_amd64.rpm
+sudo gitlab-runner start
+
+sudo gitlab-runner register --url https://gitlab.com/ --registration-token GR1348941Wg5zz_86Qepy8vUjAohB
+Enter url
+Enter Token
+Enter Description - medevops
+Enter Tag - server, ec2
+Enter Executer Shell
+
+```
+
+#### Varify
+```
+sudo gitlab-runner status
+
+``
 
