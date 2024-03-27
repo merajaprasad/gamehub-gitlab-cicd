@@ -23,7 +23,7 @@ const Header = ({ toggleActive }) => {
                       <img src={userImg} alt="User-image" className="User Image" />
                   </a>
                   <div className="user">
-                      <span className="">Sanuja K</span>
+                      <span className="">DevSecOps</span>
                       <a href="#" className="">View Profile</a>
                   </div>
               </div>
