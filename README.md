@@ -58,8 +58,7 @@ Enter Executer Shell
 ```
 
 #### Varify
-```
+```bash
 sudo gitlab-runner status
 
-``
-
+```
