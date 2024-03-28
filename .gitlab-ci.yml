@@ -12,10 +12,10 @@ build:
   - ec2
   - server
 
-  artifacts:
-  paths:
-   - node_modules
-   - package-lock.json
+ artifacts:
+ paths:
+  - node_modules
+  - package-lock.json
 
 deploy:
  stage: deploy_stage
