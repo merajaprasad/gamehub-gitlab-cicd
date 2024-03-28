@@ -36,30 +36,33 @@ Now open application from browser by running [your-public-ip:3000]. if applicati
 # GitLab Pipeline
 Prerequities
 - install gitlab runner
-- configure gitlab secret variable
-- add runner user to docker group
+- add gitlab runner user to docker group
+- configure gitlab secret variable for Docker username and token
 
-`uname -m` get OS architecture
-`chmod +x script-runner.sh` give executable permission
-`sh script-runner.sh` run the script
-
+### Install gitlab Runner
 ```bash
 curl -LJO https://gitlab-runner-downloads.s3.amazonaws.com/latest/rpm/gitlab-runner_amd64.rpm
 sudo rpm -Uvh gitlab-runner_amd64.rpm
+
 sudo gitlab-runner start
 
 sudo gitlab-runner register --url https://gitlab.com/ --registration-token GR1348941Wg5zz_86Qepy8vUjAohB
-Enter url
-Enter Token
-Enter Description - medevops
-Enter Tag - server, ec2
-Enter Executer Shell
-
 ```
+Note : Enter the following details as mentioned here
+`url` - same (hit Enter)
+`token` - same (hit enter)
+`Description` - medevops (give a description of your job)
+`Tag` - server, ec2 (give tag of your server)
+`Executer` - Shell (give executer name 'shell')
 
-#### Varify
-```
+#### Varify Runner Status
+```bash
 sudo gitlab-runner status
+```
+### add gitlab runner user to docker group
+```
+sudo usermod -aG docker gitlab-runner
+```
 
-``
+
 
