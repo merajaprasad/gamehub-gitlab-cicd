@@ -49,11 +49,11 @@ sudo gitlab-runner start
 sudo gitlab-runner register --url https://gitlab.com/ --registration-token GR1348941Wg5zz_86Qepy8vUjAohB
 ```
 Note : Enter the following details as mentioned here
-`url` - same (hit Enter)
-`token` - same (hit enter)
-`Description` - medevops (give a description of your job)
-`Tag` - server, ec2 (give tag of your server)
-`Executer` - Shell (give executer name 'shell')
+`url` - same (hit Enter).
+`token` - same (hit enter).
+`Description` - medevops (give a description of your job).
+`Tag` - server, ec2 (give tag of your server).
+`Executer` - Shell (give executer name 'shell').
 
 #### Varify Runner Status
 ```bash
