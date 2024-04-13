@@ -27,17 +27,17 @@ Your app is ready to be deployed!
 - install docker
 - install git
 
-clone this github gamehub project code and navigate inside project directory. now run follow below process.
+clone this github gamehub project code and navigate inside project directory. now follow below process.
 
-#### Create Image
+#### Create docker Image 
 ```bash
 docker build -t gamehubimage .
 ```
-#### Create Container
+#### Create docker Container
 ```bash
 docker run -d --name gamehubcontainer -p 3000:3000 gamehubimage
 ```
-Now open application from browser by running [your-public-ip:3000]. if application is not opening from browser then check port 3000 is enabled or not on your EC2 server.
+Now open application from browser by running [your-public-ip:3000]. if application is not opening from browser then check port 3000 is enabled or not on your AWS EC2 server.
 
 # GitLab Pipeline
 Prerequities
