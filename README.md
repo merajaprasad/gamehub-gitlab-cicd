@@ -26,7 +26,9 @@ Your app is ready to be deployed!
 #### Prerequisits
 - install docker
 - install git
+
 clone this github gamehub project code and navigate inside project directory. now run follow below process.
+
 #### Create Image
 ```bash
 docker build -t gamehubimage .
