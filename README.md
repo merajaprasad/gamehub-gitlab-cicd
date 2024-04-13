@@ -1,4 +1,5 @@
-# Webapp deployment using gitlab ci-cd pipeline on docker
+# Webapp deployment using gitlab ci-cd pipeline
+clone this github gamehub project code and navigate to project directory.
 ### Run Below command to Install Dependency
 ```bash
 npm Install
